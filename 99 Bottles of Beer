@@ -7,7 +7,7 @@ lyrics1 = """ bottles of beer on the wall..
 """
 lyrics2 = """ bottles of beer!
 """
-lyrics3 = """ You take one down, pass it around.
+lyrics3 = """You take one down, pass it around.
 """
 lyrics4 = """ bottles of beer on the wall..
 """
@@ -24,9 +24,15 @@ def slow_type(str):
 #define function, create loop
 def song(count):
     while count > 0:
-        print(count), slow_type(lyrics1), print(count), slow_type(lyrics2), slow_type(lyrics3)
+        body1 = str(count), lyrics1
+        body2 = str(count), lyrics2
+        body3 = lyrics3
+        slow_type(body1)
+        slow_type(body2)
+        slow_type(body3)
         count -= 1
-        print(count), slow_type(lyrics4)
+        body_4 = str(count), lyrics4
+        slow_type(body_4)
     slow_type(end_song)
 
 #call function
