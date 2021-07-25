@@ -1,0 +1,22 @@
+#99 Bottles of beer
+
+#define lyrics
+lyrics1 = " bottles of beer on the wall.. "
+lyrics2 = " bottles of beer!"
+lyrics3 = "You take one down, pass it around. "
+lyrics4 = " bottles of beer on the wall.."
+end_song = "no more bottles of beer on the wall, no more bottles of beer. Go to the store, buy me some more, 99 bottles of beer on the wall!"
+
+#define function, create loop
+def song(count):
+    while count > 0:
+        print(count, lyrics1, count, lyrics2, lyrics3)
+        count -= 1
+        print(count, lyrics4)
+    print(end_song)
+
+#call function
+
+song(99)
+
+    
