@@ -1,0 +1,30 @@
+#Random Number
+
+
+#Import modules
+import random
+
+#Define solution, print opening statement
+solution = random.randint(1, 20)
+print("I'm thinking of a number between 1 and 20.")
+
+#7 Guess Loop
+count = 0
+while count < 7:
+    print("Take a guess...")
+    ans = int(input())
+    if ans == solution:
+        print("Correct! Great Job!")
+        break
+    elif ans < solution:
+        print("Your guess is too low.")
+    elif ans > solution:
+        print("Your guess is too high.")
+    count += 1
+    attempts_remaining = 7 - count
+    if count < 7:
+        print("You have " + str(attempts_remaining) + " attempts remaining.")
+
+while count >= 6:
+    print("You ran out of guesses... The number I was thinking of was " + str(solution) + " .")
+    break
